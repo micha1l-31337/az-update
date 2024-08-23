@@ -1,4 +1,4 @@
-echo "server update starting.."
+echo "server update starting..\n"
 echo "deb http://deb.debian.org/debian bullseye main" >> /etc/apt/sources.list
 sed -i 's/^Types: deb/Types: deb deb-src/' /etc/apt/sources.list.d/ubuntu.sources
 
@@ -7,4 +7,5 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 605C66F00D6C9793 \
 
 sudo apt-get update
 sudo apt-get -y upgrade
-echo "/nserver update finished"
+echo "\nserver update finished"
+reboot
